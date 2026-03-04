@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 394.04 223.39">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #0f1d27;
+        mix-blend-mode: overlay;
+      }
+
+      .st1 {
+        isolation: isolate;
+      }
+
+      .st2 {
+        fill: #06aabd;
+      }
+    </style>
+  </defs>
+  <g class="st1">
+    <g id="_Слой_1" data-name="Слой_1">
+      <g>
+        <rect class="st0" x=".35" y=".03" width="394.04" height="223.39" rx="12" ry="12"/>
+        <g>
+          <path class="st2" d="M341.57,204.29c-18.64,0-33.81-15.17-33.81-33.81s15.17-33.81,33.81-33.81,33.81,15.17,33.81,33.81-15.17,33.81-33.81,33.81ZM341.57,137.66c-18.09,0-32.81,14.72-32.81,32.81s14.72,32.81,32.81,32.81,32.81-14.72,32.81-32.81-14.72-32.81-32.81-32.81Z"/>
+          <polygon class="st2" points="353.78 183.37 328.42 183.37 328.42 180.82 351.24 180.82 327.52 157.11 329.32 155.31 353.04 179.03 353.04 156.21 355.58 156.21 355.58 183.37 353.78 183.37"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
