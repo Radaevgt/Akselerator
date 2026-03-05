@@ -239,7 +239,7 @@ body {
 .hero-dot {
   display: inline-block;
   font-size: 0.28em;
-  vertical-align: 0.3em;
+  vertical-align: baseline;
   margin: 0 0.06em;
   line-height: 1;
 }
@@ -249,10 +249,9 @@ body {
   font-weight: 400;
   color: rgba(255,255,255,0.8);
   line-height: 1.7;
-  text-align: right;
-  grid-column: 1 / -1;
-  justify-self: end;
-  max-width: 680px;
+  text-align: left;
+  max-width: 520px;
+  flex: 1;
 }
 
 .hero-bottom {
@@ -400,10 +399,12 @@ body {
 }
 
 .benefit-card p {
-  font-size: 14px;
-  line-height: 1.65;
+  font-size: 15px;
+  line-height: 1.55;
   color: #4a5568;
   margin-bottom: 20px;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .benefit-card-img {
@@ -536,9 +537,11 @@ body {
 .program-card-text {
   font-size: 18px;
   color: #fff;
-  line-height: 1.6;
+  line-height: 1.5;
   position: relative;
   z-index: 1;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .program-card-arrow {
@@ -1136,7 +1139,7 @@ body {
       <a href="#audience">Для кого</a>
       <a href="#timeline">Этапы</a>
     </nav>
-    <a href="#cta" class="header-cta">Подать заявку</a>
+    <a href="https://forms.yandex.ru/u/698adb1c49af47fb6f113d53" class="header-cta" target="_blank">Подать заявку</a>
     <button class="burger" onclick="toggleMenu()" aria-label="Меню">
       <span></span><span></span><span></span>
     </button>
@@ -1150,7 +1153,7 @@ body {
   <a href="#program" onclick="toggleMenu()">Программа</a>
   <a href="#audience" onclick="toggleMenu()">Для кого</a>
   <a href="#timeline" onclick="toggleMenu()">Этапы</a>
-  <a href="#cta" onclick="toggleMenu()">Подать заявку</a>
+  <a href="https://forms.yandex.ru/u/698adb1c49af47fb6f113d53" onclick="toggleMenu()" target="_blank">Подать заявку</a>
 </div>
 
 <!-- ===== HERO ===== -->
@@ -1162,13 +1165,10 @@ body {
         <span class="hero-title-line1">ГОРЬКИЙ<span class="hero-dot">&#9632;</span></span>
         <span class="hero-title-line2">АКСЕЛЕРАТОР</span>
       </h1>
-      <p class="hero-desc">
-        Практико-ориентированная образовательная программа с экспертной поддержкой для развития управленческих, продуктовых и коммерческих компетенций ИТ-компаний, с фокусом на рост, инвестиции и пилотирование.
-      </p>
     </div>
     <div class="hero-bottom reveal">
-      <div>
-        <a href="#cta" class="hero-cta">
+      <div class="hero-bottom-left">
+        <a href="https://forms.yandex.ru/u/698adb1c49af47fb6f113d53" class="hero-cta" target="_blank">
           <span class="hero-cta-text">ПОДАТЬ ЗАЯВКУ</span>
           <span class="hero-cta-arrow">
             <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -1176,6 +1176,9 @@ body {
         </a>
         <p class="hero-deadline" style="margin-top:16px;">ОКОНЧАНИЕ ПРИЕМА ЗАЯВОК — 11 МАРТА 2026</p>
       </div>
+      <p class="hero-desc">
+        Практико-ориентированная образовательная программа с экспертной поддержкой для развития управленческих, продуктовых и коммерческих компетенций ИТ-компаний, с фокусом на рост, инвестиции и пилотирование.
+      </p>
     </div>
   </div>
 </section>
@@ -1193,7 +1196,7 @@ body {
         </div>
       </div>
       <div class="benefit-card">
-        <h3>Наладите полезные связи</h3>
+        <h3>Наладите<br>полезные связи</h3>
         <p>Живое общение с коллегами по рынку, обмен опытом и партнёрство.</p>
         <div class="benefit-card-img">
           <img src="assets/svg/фото 2.svg" alt="3D иллюстрация" loading="lazy">
@@ -1207,7 +1210,7 @@ body {
         </div>
       </div>
       <div class="benefit-card">
-        <h3>Протестируете стратегию</h3>
+        <h3>Протестируете<br>стратегию</h3>
         <p>Защитите проект перед экспертами, проверьте гипотезы на прочность и получите честную обратную связь.</p>
         <div class="benefit-card-img">
           <img src="assets/svg/фото 4.svg" alt="3D иллюстрация" loading="lazy">
@@ -1268,30 +1271,30 @@ body {
     </div>
     <div class="program-grid reveal">
       <div class="program-card">
-        <span class="program-card-text">формирование и развитие команды</span>
+        <span class="program-card-text">формирование<br>и развитие команды</span>
         <span class="program-card-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
       <div class="program-card">
-        <span class="program-card-text">упаковка и доработка продукта</span>
+        <span class="program-card-text">упаковка<br>и доработка продукта</span>
         <span class="program-card-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
       <div class="program-card">
-        <span class="program-card-text">маркетинг и продажи, включая экспортную деятельность</span>
+        <span class="program-card-text">маркетинг и продажи,<br>включая экспортную деятельность</span>
         <span class="program-card-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
     </div>
     <div class="program-grid-bottom reveal">
       <div class="program-card">
-        <span class="program-card-text">юридическое сопровождение и защита интеллектуальной собственности</span>
+        <span class="program-card-text">юридическое сопровождение<br>и защита интеллектуальной собственности</span>
         <span class="program-card-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
       <div class="program-card">
-        <span class="program-card-text">навыки публичных выступлений и презентации проектов</span>
+        <span class="program-card-text">навыки публичных выступлений<br>и презентации проектов</span>
         <span class="program-card-arrow"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg></span>
       </div>
     </div>
     <div class="program-decor">
-      <img src="assets/svg/рисунок.svg" alt="" aria-hidden="true" loading="lazy">
+      <img src="assets/img/program-decor.png" alt="" aria-hidden="true" loading="lazy">
     </div>
   </div>
 </section>
@@ -1429,6 +1432,7 @@ body {
   <h2 class="partners-title reveal">Партнёры</h2>
   <div class="partners-marquee reveal">
     <div class="partners-track">
+      <img src="assets/logos/tractor-vc.png" alt="Tractor VC" loading="lazy">
       <img src="assets/logos/friendly-vc.svg" alt="Friendly VC" loading="lazy">
       <img src="assets/logos/chak-vc.svg" alt="Чак VC" loading="lazy">
       <img src="assets/logos/startup-drive.svg" alt="Startup Drive" loading="lazy">
@@ -1442,6 +1446,7 @@ body {
       <img src="assets/logos/headhunter.png" alt="HeadHunter" loading="lazy">
       <img src="assets/logos/e-promo.svg" alt="E-promo Group" loading="lazy">
       <!-- duplicate for seamless loop -->
+      <img src="assets/logos/tractor-vc.png" alt="Tractor VC" loading="lazy">
       <img src="assets/logos/friendly-vc.svg" alt="Friendly VC" loading="lazy">
       <img src="assets/logos/chak-vc.svg" alt="Чак VC" loading="lazy">
       <img src="assets/logos/startup-drive.svg" alt="Startup Drive" loading="lazy">
@@ -1464,7 +1469,7 @@ body {
   <div class="container cta-inner reveal">
     <h2>Готовы стать участниками?</h2>
     <p class="cta-sub">акселерационной программы &laquo;Горький.Акселератор&raquo;</p>
-    <a href="#" class="cta-btn">
+    <a href="https://forms.yandex.ru/u/698adb1c49af47fb6f113d53" class="cta-btn" target="_blank">
       <span class="cta-btn-text">ПОДАТЬ ЗАЯВКУ</span>
       <span class="cta-btn-arrow">
         <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
@@ -1486,7 +1491,7 @@ body {
         <ul class="footer-links">
           <li><a href="#benefits">Преимущества</a></li>
           <li><a href="#audience">Для кого</a></li>
-          <li><a href="#cta">Подать заявку</a></li>
+          <li><a href="https://forms.yandex.ru/u/698adb1c49af47fb6f113d53" target="_blank">Подать заявку</a></li>
         </ul>
       </div>
       <div>
