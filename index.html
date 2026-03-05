@@ -4,9 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Горький.Акселератор</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Onest:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
+@font-face { font-family: 'Onest'; src: url('Onest/Onest-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Onest'; src: url('Onest/Onest-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Onest'; src: url('Onest/Onest-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Onest'; src: url('Onest/Onest-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Onest'; src: url('Onest/Onest-Bold.ttf') format('truetype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Onest'; src: url('Onest/Onest-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Onest'; src: url('Onest/Onest-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; font-display: swap; }
+
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
@@ -19,7 +25,7 @@
   --radius: 16px;
   --radius-sm: 12px;
   --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --font-display: 'Unbounded', sans-serif;
+  --font-display: 'Onest', sans-serif;
   --font-body: 'Onest', sans-serif;
   --hover-light: rgba(33,173,253,0.06);
   --hover-dark: rgba(33,173,253,0.08);
@@ -232,20 +238,21 @@ body {
 
 .hero-dot {
   display: inline-block;
-  font-size: 0.35em;
-  vertical-align: middle;
-  margin: 0 0.05em;
+  font-size: 0.28em;
+  vertical-align: 0.3em;
+  margin: 0 0.06em;
   line-height: 1;
 }
 
 .hero-desc {
-  font-size: clamp(14px, 1.2vw, 17px);
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: 400;
   color: rgba(255,255,255,0.8);
   line-height: 1.7;
-  max-width: 480px;
-  text-align: left;
-  grid-column: 2;
+  text-align: right;
+  grid-column: 1 / -1;
   justify-self: end;
+  max-width: 680px;
 }
 
 .hero-bottom {
@@ -303,7 +310,7 @@ body {
 
 .hero-deadline {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 300;
   color: rgba(255,255,255,0.5);
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -474,10 +481,13 @@ body {
 
 .program-subtitle {
   font-size: clamp(16px, 1.5vw, 20px);
-  color: rgba(255,255,255,0.7);
+  color: #ffffff;
   max-width: 480px;
   line-height: 1.6;
   font-style: normal;
+  font-weight: 400;
+  text-align: right;
+  margin-left: auto;
 }
 
 .program-grid {
@@ -558,7 +568,7 @@ body {
 
 .program-decor {
   position: absolute;
-  bottom: -40px;
+  bottom: 20px;
   left: -40px;
   width: 40%;
   max-width: 500px;
@@ -748,7 +758,7 @@ body {
 .timeline-event-date {
   font-family: var(--font-display);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 300;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -785,6 +795,62 @@ body {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+/* ===== PARTNERS ===== */
+.section-partners {
+  padding: 80px 0;
+  background: #fff;
+  overflow: hidden;
+}
+
+.partners-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 52px);
+  font-weight: 700;
+  color: #0d1117;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.partners-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 10%, #000 90%, transparent 100%);
+}
+
+.partners-track {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.partners-track:hover {
+  animation-play-state: paused;
+}
+
+.partners-track img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.4s;
+  flex-shrink: 0;
+}
+
+.partners-track img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 /* ===== CTA ===== */
@@ -1198,7 +1264,7 @@ body {
   <div class="container" style="position:relative;">
     <div class="program-header reveal">
       <h2 class="section-title section-title--light" style="margin-bottom:0;">В программе акселератора</h2>
-      <p class="program-subtitle">Информационно-просветительская программа по ключевым направлениям:</p>
+      <p class="program-subtitle">Информационно-просветительская<br>программа по ключевым направлениям:</p>
     </div>
     <div class="program-grid reveal">
       <div class="program-card">
@@ -1354,6 +1420,40 @@ body {
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PARTNERS ===== -->
+<section class="section-partners" id="partners">
+  <h2 class="partners-title reveal">Партнёры</h2>
+  <div class="partners-marquee reveal">
+    <div class="partners-track">
+      <img src="assets/logos/friendly-vc.svg" alt="Friendly VC" loading="lazy">
+      <img src="assets/logos/chak-vc.svg" alt="Чак VC" loading="lazy">
+      <img src="assets/logos/startup-drive.svg" alt="Startup Drive" loading="lazy">
+      <img src="assets/logos/fond-eremeeva.svg" alt="Фонд им. Виктора Еремеева" loading="lazy">
+      <img src="assets/logos/sindikat.svg" alt="Синдикат" loading="lazy">
+      <img src="assets/logos/tanay-vc.png" alt="Tanay VC" loading="lazy">
+      <img src="assets/logos/yandex-cloud.svg" alt="Yandex Cloud" loading="lazy">
+      <img src="assets/logos/r7-office.svg" alt="Р7 Офис" loading="lazy">
+      <img src="assets/logos/russoft.png" alt="Руссофт" loading="lazy">
+      <img src="assets/logos/rtk-cod.png" alt="РТК-ЦОД" loading="lazy">
+      <img src="assets/logos/headhunter.png" alt="HeadHunter" loading="lazy">
+      <img src="assets/logos/e-promo.svg" alt="E-promo Group" loading="lazy">
+      <!-- duplicate for seamless loop -->
+      <img src="assets/logos/friendly-vc.svg" alt="Friendly VC" loading="lazy">
+      <img src="assets/logos/chak-vc.svg" alt="Чак VC" loading="lazy">
+      <img src="assets/logos/startup-drive.svg" alt="Startup Drive" loading="lazy">
+      <img src="assets/logos/fond-eremeeva.svg" alt="Фонд им. Виктора Еремеева" loading="lazy">
+      <img src="assets/logos/sindikat.svg" alt="Синдикат" loading="lazy">
+      <img src="assets/logos/tanay-vc.png" alt="Tanay VC" loading="lazy">
+      <img src="assets/logos/yandex-cloud.svg" alt="Yandex Cloud" loading="lazy">
+      <img src="assets/logos/r7-office.svg" alt="Р7 Офис" loading="lazy">
+      <img src="assets/logos/russoft.png" alt="Руссофт" loading="lazy">
+      <img src="assets/logos/rtk-cod.png" alt="РТК-ЦОД" loading="lazy">
+      <img src="assets/logos/headhunter.png" alt="HeadHunter" loading="lazy">
+      <img src="assets/logos/e-promo.svg" alt="E-promo Group" loading="lazy">
     </div>
   </div>
 </section>
