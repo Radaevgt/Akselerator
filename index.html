@@ -190,7 +190,7 @@ body {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('assets/bg/bg-01.jpg') center/cover no-repeat;
+  background: url('assets/bg/bg-01.jpg') center/100% 100% no-repeat;
 }
 
 .hero-bg::after {
@@ -316,38 +316,57 @@ body {
 }
 
 /* ===== SECTION BACKGROUNDS ===== */
+/* Seamless section transitions — no gaps */
+.hero,
+.section-benefits,
+.section-stats,
+.section-program,
+.section-audience,
+.section-timeline,
+.section-partners,
+.cta-section {
+  display: block;
+  margin: 0;
+  border: 0;
+}
+
 .section-benefits {
   position: relative;
   padding: 100px 0;
-  background: url('assets/bg/bg-02.jpg') center/cover no-repeat;
+  background: url('assets/bg/bg-02.jpg') top/100% 100% no-repeat;
+  background-color: #cef0f5;
   overflow: hidden;
 }
 
 .section-stats {
   position: relative;
   padding: 100px 0;
-  background: url('assets/bg/bg-03.jpg') center/cover no-repeat;
+  background: url('assets/bg/bg-03.jpg') top/100% 100% no-repeat;
+  background-color: #070b14;
   overflow: hidden;
 }
 
 .section-program {
   position: relative;
   padding: 100px 0;
-  background: url('assets/bg/bg-04.jpg') center/cover no-repeat;
+  background: url('assets/bg/bg-04.jpg') top/100% 100% no-repeat;
+  background-color: #0a0e1a;
   overflow: hidden;
 }
 
 .section-audience {
   position: relative;
   padding: 100px 0;
-  background: url('assets/bg/bg-05.jpg') center/cover no-repeat;
+  background: url('assets/bg/bg-05.jpg') top/100% 100% no-repeat;
+  background-color: #a6e4ec;
   overflow: hidden;
 }
 
 .section-timeline {
   position: relative;
   padding: 100px 0;
-  background: url('assets/bg/bg-06.jpg') center/cover no-repeat;
+  background: url('assets/bg/bg-06.jpg') top/100% 100% no-repeat;
+  background-color: #f0fafb;
   overflow: hidden;
 }
 
